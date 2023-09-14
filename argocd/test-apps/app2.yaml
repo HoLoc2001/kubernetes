@@ -2,12 +2,12 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: webapp-2
-  namespace: argocd
+  namespace: loc-test
   finalizers:
   - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: argocd-app2
+    namespace: loc-test-app2
     server: https://kubernetes.default.svc
   project: default
   source:
